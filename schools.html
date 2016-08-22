@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-<link rel="stylesheet" href="myStyless.css">
-
     <head>
-<style>
-#background{
-	background-color:white;
-}
-
-</style>	
-
-     
+		<link rel="stylesheet" href="myStyless.css">
+		<style>
+			#background {
+				background-color:white;
+			}
+			
+			#map {
+				width: 100%;
+				height: 400px;
+			}
+		</style>	
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- Latest compiled and minified CSS -->
@@ -20,35 +21,118 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<div id=background >   <ul class="nav nav-tabs">
-        
-  <li role="presentation"><a href="index.html">#Home</a></li> <!-- temi --> 
-  <li role="presentation"><a href="issues.html">#CampusProbs</a></li>  <!--cynthia -->
-  <li role="presentation"><a href="tips.html">#Tips</a></li> <!--mia-->
-  <li role="presentation"><a href="schools.html">#SafeSchools</a></li> <!--amaya--> 
-  <li role="presentation"><a href="hotline.html">#Resources</a></li> <!--all of us -->
-  <li role="presentation"><a href="stories.html">#InTheMedia</a></li> <!--Amaya--> 
-  <li role="presentation"><a href="about.html">#AboutMe</a></li> <!--mia-->
-  <img align = "right" src="logo2.png"> 
-  </ul>
-</div>   
-    </head>
-   <body>  
-<br> </br>
-  <div class="container"> 
-       
-  
-       <div class="jumbotron center-block">
-	   
-	   
-	   
-   <h1 align=center>How do I know if a school is safe?</h1>
-  <p>There are many factors that go in to choosing a college. Safety and security is a large factor that many people don't think about. Here is a guide to picking a campus that is safe and secure!</p>
-
-
-</div>
-  <p align="center"><a class="btn btn-primary btn-lg "  href="hotline.html" role="button">Resources</a></p>  
-   
- </div> 
-  </body>
-    </html>
+		
+		<script>
+		function initMap() {			
+				<!-- DEFINE MARKER COORDINATES -->
+				var RWC = {lat: 43.125895, lng: -77.798072};
+				var NIT = {lat: 40.819704, lng: -73.600610};
+				var SJC = {lat: 40.690509, lng: -73.967773};
+				var MC = {lat: 40.686122, lng: -73.627335};
+				var JJC = {lat: 40.770825, lng: -73.989458};
+				var BC = {lat: 40.630835, lng: -73.950523};
+				var LC = {lat: 40.874890, lng: -73.893176};
+				var FIT = {lat: 40.746828, lng: -73.993937};
+				var PINY = {lat: 40.694229, lng: -73.986639};
+				
+				var locations = ['RWC',43.125895,-77.798072];
+				
+				
+				var mapDiv = document.getElementById('map');
+				var map = new google.maps.Map(mapDiv, {
+					center: {lat: 40.7128, lng: -74.0059},
+					zoom: 8
+				});
+							
+				
+				
+				<!-- DEFINE MARKER CHARACTERISTICS-->
+				var roberts = new google.maps.Marker({
+					position: RWC, 
+					map: map,
+					title: "Roberts Wesleyan College"
+				});
+				var new_York = new google.maps.Marker({
+					position: NIT, 
+					map: map,
+					title: "New York Institute of Technology "
+				});
+				var joseph = new google.maps.Marker({
+					position: SJC, 
+					map: map,
+					title: "St. Joseph's College New York "
+				});
+				var molloy = new google.maps.Marker({
+					position: MC, 
+					map: map,
+					title: "Molloy College "
+				});
+				var john_Jay = new google.maps.Marker({
+					position: JJC, 
+					map: map,
+					title: "CUNY John Jay College of Criminal Justice "
+				});
+				var brooklyn = new google.maps.Marker({
+					position: BC, 
+					map: map,
+					title: "CUNY Brooklyn College "
+				});
+				var lehman = new google.maps.Marker({
+					position: LC, 
+					map: map,
+					title: "CUNY Lehman College "
+				});
+				var fashion = new google.maps.Marker({
+					position: FIT, 
+					map: map,
+					title: "Fashion Institute of Technology "
+				});
+				var polytechnic = new google.maps.Marker({
+					position: Piny, 
+					map: map,
+					title: "Polytechnic Institute of New York University "
+				});
+				
+			
+				roberts.setMap(map);
+				new_York.setMap(map);
+				joseph.setMap(map);
+				molloy.setMap(map);
+				joseph.setMap(map);
+				john_Jay.setMap(map);
+				lehman.setMap(map);
+				fashion.setMap(map);
+				polytechnic.setMap(map);
+				
+			};
+			
+		</script>
+	    <script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=  AIzaSyDHkqQt-RoV8RUBU3D68A1Uux__CMomfLc &callback=initMap">
+		</script>
+	</head>
+	<body>
+		<div id=background >
+			<ul class="nav nav-tabs">
+			  <li role="presentation"><a href="index.html">#Home</a></li> <!-- temi --> 
+			  <li role="presentation"><a href="issues.html">#CampusProbs</a></li>  <!--cynthia -->
+			  <li role="presentation"><a href="tips.html">#Tips</a></li> <!--mia-->
+			  <li role="presentation"><a href="schools.html">#SafeSchools</a></li> <!--amaya--> 
+			  <li role="presentation"><a href="hotline.html">#Resources</a></li> <!--all of us -->
+			  <li role="presentation"><a href="stories.html">#Stories</a></li> <!--Amaya--> 
+			  <li role="presentation"><a href="about.html">#AboutMe</a></li> <!--mia-->
+			  <img align = "right" src="logo2.png"> 
+			  </ul>
+		</div>   
+		<br>
+		<div class="container"> 
+			<div class="jumbotron center-block">
+			<h1 align=center>How do I know if a school is safe?</h1>
+		    <p>There are many factors that go in to choosing a college. Safety and security is a large factor that many people don't think about. Here is a guide to picking a campus that is safe and secure!</p>
+		</div>
+		<h3>My Google Maps Demo</h3>
+		<div id="map"></div>
+		
+		<p align="center"><a class="btn btn-primary btn-lg "  href="hotline.html" role="button">Resources</a></p>
+	</body>
+</html>
