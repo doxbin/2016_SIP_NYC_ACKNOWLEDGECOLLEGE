@@ -8,13 +8,8 @@
 
 
 h1{
-<<<<<<< HEAD
-font-family: 'News Cycle', sans-serif; 
 
-=======
-
-    text-transform:uppercase;
->>>>>>> 25cd47bbb9b2ea76c87d11b4618ddb67f705f3d7
+ 
     
     
     
@@ -24,7 +19,7 @@ font-family: 'News Cycle', sans-serif;
 
 h2{
   
-    text-transform:uppercase;
+   
     
     
     
@@ -60,8 +55,8 @@ body {
        body{
 		color: #414f57;
 		
-		font-size: 14pt;
-		font-weight: 300;
+		font-size: 10pt;
+		font-weight: 10;
 		line-height: 2;
 		letter-spacing: 0.2em;
 		text-transform:none;
